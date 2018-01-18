@@ -9,17 +9,18 @@
 
 const large = $('.hero');
 const thumbs = $('.thumbnails');
-// const target = $(event.currentTarget);
-// const other = $('.js-lightbulb').not(targetBulb);
 
 
-// $('#mtl').click(function(){
-//   $('#picture').attr('src', '/images/short.png');
-// });
+function thumbnailClicks() {
+  $('.thumbnail').click(function (event) {
+      const imgSrc = $(event.currentTarget).find('img').attr('src');
+      
+      $('.hero img').attr('src', imgSrc);
+  })
+}
 
-$('.thumbnail').click(function() {
-  $('.hero').attr('src', 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-65/cat2.jpg');
-  console.log('click');
+$(function () {
+  thumbnailClicks();
 });
 
 // $('.thumb2').on('click', event => {
