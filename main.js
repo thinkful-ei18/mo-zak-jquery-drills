@@ -8,18 +8,10 @@
 
 'use strict';
 
-
-
 function thumbnailClicks() {
-
-  $('.thumbnail').click(function (event) {
-    const imgSrc = $(this).find('img').attr('src');
-    const imgAlt = $(this).find('img').attr('alt');
-
   $('.thumbnail').click(function(event) {
     const imgSrc = $(this).find('input').attr('src');
     const imgAlt = $(this).find('input').attr('alt');
-
     $('.hero img').attr('src', imgSrc);
     $('.hero alt').attr('alt', imgAlt);
   });
