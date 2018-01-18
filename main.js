@@ -5,12 +5,13 @@
 // Some of the methods we discussed in the previous assignment might be helpful here, 
 // but you should also use the jQuery docs and Google if you're not sure what to do here. 
 // Researching on your own is a key skill, and it'll get easier with practice.
+
 'use strict';
 
 function thumbnailClicks() {
-  $('.thumbnail').click(function (event) {
-    const imgSrc = $(event.currentTarget).find('img').attr('src');
-    const imgAlt = $(event.currentTarget).find('img').attr('alt');
+  $('.thumbnail').click(function(event) {
+    const imgSrc = $(this).find('input').attr('src');
+    const imgAlt = $(this).find('input').attr('alt');
     $('.hero img').attr('src', imgSrc);
     $('.hero alt').attr('alt', imgAlt);
   });
@@ -19,8 +20,5 @@ function thumbnailClicks() {
 $(function () {
   thumbnailClicks();
 });
-
-
-
 
 
