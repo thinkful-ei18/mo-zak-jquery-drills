@@ -7,10 +7,12 @@
 // Researching on your own is a key skill, and it'll get easier with practice.
 'use strict';
 
+
+
 function thumbnailClicks() {
   $('.thumbnail').click(function (event) {
-    const imgSrc = $(event.currentTarget).find('img').attr('src');
-    const imgAlt = $(event.currentTarget).find('img').attr('alt');
+    const imgSrc = $(this).find('img').attr('src');
+    const imgAlt = $(this).find('img').attr('alt');
     $('.hero img').attr('src', imgSrc);
     $('.hero alt').attr('alt', imgAlt);
   });
