@@ -7,26 +7,20 @@
 // Researching on your own is a key skill, and it'll get easier with practice.
 'use strict';
 
-const large = $('.hero');
-const thumbs = $('.thumbnails');
-
-
 function thumbnailClicks() {
   $('.thumbnail').click(function (event) {
-      const imgSrc = $(event.currentTarget).find('img').attr('src');
-      
-      $('.hero img').attr('src', imgSrc);
-  })
+    const imgSrc = $(event.currentTarget).find('img').attr('src');
+    const imgAlt = $(event.currentTarget).find('img').attr('alt');
+    $('.hero img').attr('src', imgSrc);
+    $('.hero alt').attr('alt', imgAlt);
+  });
 }
 
 $(function () {
   thumbnailClicks();
 });
 
-// $('.thumb2').on('click', event => {
-//   large.attr('src', 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-65/cat2.jpg');
-//   console.log('click');
-// });
+
 
 
 
